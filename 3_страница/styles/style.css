@@ -1,0 +1,411 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+header, nav, section, footer {
+  display: block;
+}
+
+.nav-mobile-wrapper {
+  display: none;
+  right: 0;
+  top: 0;
+  position: fixed;
+  width: 0;
+  max-height: 100vh;
+  text-align: left;
+  overflow: auto;
+  z-index: 1000;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.nav-mobile-active {
+  width: 100%;
+}
+
+.nav-mobile {
+  width: calc(100% - 6vw);
+  padding: 50px 3vw 20px;
+  background-color: #0f9bf8f0;
+}
+
+.nav-mobile a {
+  display: block;
+  color: white;
+  font-weight: normal;
+  text-decoration: none;
+  padding: 15px 0;
+  font-size: 26px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.menu-button {
+  display: none;
+  position: fixed;
+  top: 18px;
+  right: 30px;
+  width: 40px;
+  height: 24px;
+  cursor: pointer;
+  border-top: 4px solid gray;
+  border-bottom: 4px solid gray;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  z-index: 1100;
+}
+
+.menu-button:before, .menu-button:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  height: 4px;
+  background-color: gray;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.menu-button-active {
+  border-bottom-color: #FFFFFF00;
+  border-top-color: #FFFFFF00;
+}
+
+.menu-button-active:before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.menu-button-active:after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+/* block */
+.image-top {
+  position: relative;
+  min-height: 100vh;
+  background: url(../photos/top_trips.jpg) no-repeat center/cover;
+}
+
+.image-top .wrapper {
+  padding-bottom: 30px;
+}
+
+.wrapper {
+  position: relative;
+  max-width: 1190px;
+  margin: 0 auto;
+  padding: 0 4vw;
+}
+
+header {
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 45px 0;
+  z-index: 100;
+}
+
+.logo {
+  padding: 13px 100px;
+  background: url(../icons/spasskaya-moscow.png) no-repeat center/contain;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.my a {
+  color: white;
+  text-decoration: none;
+  margin-left: 30px;
+  position: relative;
+  white-space: nowrap;
+}
+
+@media (max-width: 800px) {
+  .my {
+    display: none;
+  }
+  .menu-button {
+    display: block;
+  }
+  .nav-mobile-wrapper {
+    display: block;
+  }
+}
+
+.head {
+  position: relative;
+  text-align: center;
+  color: white;
+  margin: 110px 0 140px;
+}
+
+.head h3 {
+  font-size: 40px;
+  color: white;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+.head__text {
+  font-size: 25px;
+  letter-spacing: 1px;
+}
+
+/* block */
+.choice {
+  padding: 70px 0 65px;
+}
+
+.choice h2 {
+  font-size: 26px;
+  color: #709dca;
+  text-transform: uppercase;
+  line-height: 0.846;
+  text-align: center;
+}
+
+/* block */
+.trips-bloks {
+  padding-bottom: 120px;
+}
+
+.trips {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.trips-image {
+  position: relative;
+  min-width: 50%;
+  min-height: 625px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-preferred-size: 450px;
+      flex-basis: 450px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.trips-text {
+  position: relative;
+  min-width: 50%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-preferred-size: 450px;
+      flex-basis: 450px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #ffc155;
+}
+
+.trips-text__about {
+  max-width: 550px;
+  color: white;
+  padding: 50px 0 30px 45px;
+}
+
+.trips-text__about h3 {
+  font-size: 25px;
+  line-height: 1.231;
+  margin-bottom: 18px;
+}
+
+.trips-text__about p {
+  margin: 35px auto;
+  line-height: 1.5;
+  margin-bottom: 18px;
+}
+
+.trips-text__button-block {
+  position: relative;
+  margin-top: 40px;
+}
+
+.trips-text__button {
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  background: #e7ad48;
+  text-transform: uppercase;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.service {
+  font-size: 25px;
+  font-family: "Tahoma";
+  text-transform: uppercase;
+}
+
+.image-one {
+  background: url(../photos/trips_1.jpg) no-repeat center center/cover;
+}
+
+.image-trio {
+  background: url(../photos/trips_3.jpg) no-repeat center center/cover;
+}
+
+.image-two {
+  background: url(../photos/trips_2.jpg) no-repeat center center/cover;
+}
+
+.text-right {
+  text-align: right;
+  padding: 50px 45px 30px 0;
+  margin-left: auto;
+}
+
+@media (max-width: 920px) {
+  .trips-text__about {
+    padding: 80px 3vw;
+    max-width: 100%;
+    text-align: justify;
+  }
+}
+
+/* block */
+.final {
+  background: #273a43;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 40px 0;
+  color: white;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__we,
+.footer__contact,
+.footer__news {
+  max-width: 260px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-preferred-size: 250px;
+      flex-basis: 250px;
+  padding: 0 1vw;
+}
+
+footer h4 {
+  padding: 20px 0;
+}
+
+.footer__we {
+  margin-top: 20px;
+}
+
+.footer__we .logo {
+  padding: 70px;
+  background: url(../icons/spasskaya-moscow.png) no-repeat center/contain;
+}
+
+.footer__we div {
+  padding: 30px 0;
+  line-height: 1.5;
+  font-weight: 100;
+}
+
+.footer__contact p {
+  padding: 13px;
+}
+
+.footer__contact img {
+  background: center center / cover no-repeat;
+  padding: 12px;
+  margin: 10px 10px 10px 0;
+  float: left;
+}
+
+.footer__news div {
+  margin: 10px auto;
+}
+
+.footer__news p {
+  color: #0f9bf8;
+}
+
+/* block */
+.script {
+  padding: 30px 0;
+  background-color: #172227;
+}
+
+.script__blocks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: white;
+}
+
+.script__blocks div {
+  max-width: 33.33334%;
+  padding: 10px 1vw;
+}
+
+.social a {
+  background: white center center / contain no-repeat;
+  padding: 16px;
+  margin-left: 5px;
+  font-size: 0;
+  display: inline-block;
+}
+
+@media (max-width: 900px) {
+  .footer__we,
+  .footer__contact,
+  .footer__news {
+    min-width: 100%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,567 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+header, nav, section, footer{
+    display: block;
+}
+  
+
+.nav-mobile-wrapper {
+    display: none;
+    right: 0;
+    top: 0;
+    position: fixed;
+    width: 0;
+    max-height: 100vh;
+    text-align: left;
+    overflow: auto;
+    z-index: 1000;
+    transition: 0.3s;
+}
+
+.nav-mobile-active {
+    width: 100%;
+}
+
+.nav-mobile {
+    width: calc(100% - 6vw);
+    padding: 50px 3vw 20px;
+    background-color: #0f9bf8f0;
+
+    a {
+        display: block;
+        color: white;
+        font-weight: normal;
+        text-decoration: none;
+        padding: 15px 0;
+        font-size: 26px;
+        text-align: center;
+        white-space: nowrap;
+    }
+}
+
+.menu-button {
+    display: none;
+    position: fixed;
+    top: 18px;
+    right: 30px;
+    width: 40px;
+    height: 24px;
+    cursor: pointer;
+    border-top: 4px solid gray;
+    border-bottom: 4px solid gray;
+    transition: 0.2s;
+    z-index: 1100;
+
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 100%;
+        height: 4px;
+        background-color: gray;
+        transition: 0.3s;
+    }
+}
+
+.menu-button-active {
+    border-bottom-color: #FFFFFF00;
+    border-top-color: #FFFFFF00;
+
+    &:before {
+        transform: rotate(45deg);
+    }
+
+    &:after {
+        transform: rotate(-45deg);
+    }
+}
+
+/* block */
+section.image{    
+    position: relative;
+    min-height: 100vh;
+    background: url(../photos/top_darken.jpg) no-repeat center / cover;        
+}
+
+.wrapper {
+    position: relative;
+    max-width: 1190px;
+    margin: 0 auto;  
+    padding: 0 4vw;    
+}
+
+.image .wrapper{
+    padding-bottom: 30px;
+}
+
+header {
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 45px 0;
+    z-index: 100;       
+}
+
+.logo{
+    padding: 13px 100px;
+    background: url(../icons/spasskaya-moscow.png) no-repeat center / contain;
+    box-sizing: border-box;
+}
+
+.my a {
+    color: white;    
+    text-decoration: none;
+    margin-left: 30px;
+    position: relative;   
+    white-space: nowrap; 
+}
+
+@media (max-width: 800px) {
+    .my{
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+    .nav-mobile-wrapper {
+        display: block;
+    }
+}
+
+.head{
+    position: relative;
+    text-align:  center;
+    color: white;
+    margin: 110px 0 140px;
+} 
+
+h1{
+    font-size: 60px;
+}
+
+.head__text{
+    font-size: 25px;
+    letter-spacing: 1px;
+    margin-bottom: 120px;
+}
+
+a.button{    
+    padding: 20px 30px;
+    color: white;
+    text-decoration: none;
+    background: #0f9bf8;
+    text-transform: uppercase;    
+    border-radius: 10px;    
+    cursor: pointer;
+}
+
+/* block */
+.proposal{
+    position: relative;
+    text-align: center;
+    padding: 80px 0;
+}
+
+h2{
+    text-transform: uppercase;
+    font-size: 26px;
+    color: #709dca;
+    text-align: center;          
+}
+
+/* block */
+.blocks{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.block{    
+    min-width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: inline-block;
+    justify-content: center;  
+    margin-bottom: 30px;   
+    flex-grow: 1;
+    flex-basis: 400px;   
+}
+
+.block h4{
+    margin-left: 60px;
+    margin-bottom: 10px;
+}
+
+.block div{
+    margin-left: 60px;
+    font-weight: 100;
+    line-height: 1.5;
+}
+
+.block img{
+    background: no-repeat left / contain;
+    padding: 25px;
+    float: left;
+}
+
+/* block */
+.we{
+    display: flex;
+    flex-wrap: wrap;    
+}    
+
+.we-left{
+    position: relative;
+    min-width: 50%;
+    min-height: 530px;
+    flex-grow: 1;
+    flex-basis: 450px;
+    box-sizing: border-box;    
+    background: url(../photos/group.jpg) no-repeat center center / cover;    
+}
+
+.we-right{
+    position: relative;
+    min-width: 50%;
+    flex-grow: 1;
+    flex-basis: 450px;
+    box-sizing: border-box;    
+    align-items: center;
+    justify-content: center;
+    background-color: #ffa500;            
+}    
+
+.we-right__about{    
+    padding: 80px 0 80px 85px;
+    max-width: 500px;
+    color: white;       
+}
+
+.we-right__about p{
+    margin: 35px auto;
+    line-height: 1.5;
+}
+
+.we-right__button-block{
+    position: relative;
+    margin-top: 50px; 
+}
+
+a.we-right__button{    
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    background: #ff7300;
+    text-transform: uppercase;   
+    border-radius: 5px; 
+    cursor: pointer;
+}
+
+/* block */
+.content-photo{
+    position: relative;
+    text-align: center;
+    padding: 80px 0;
+}
+
+.content-photo h2, .comment-head h2{
+    margin-bottom: 50px;
+}
+
+.content-photo h2:after{
+    content: '';
+    position: absolute;
+    display: block;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    width: 220px;
+    height: 2px;
+    margin: 0 auto;
+    background-color: #ffc602;
+}
+
+/* block */
+.passage{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.passage__image{
+    min-width: 25%;
+    min-height: 200px;
+    background: center center / cover no-repeat;
+    flex-grow: 1;
+    flex-basis: 250px;
+}
+
+.comment-head{
+    position: relative;
+    text-align: center;
+    padding: 70px 0;
+}
+
+.comment-head h2:after{
+    content: '';
+    position: absolute;
+    display: block;
+    bottom: -20px;
+    left: 0;
+    right: 0;
+    width: 220px;
+    height: 2px;
+    margin: 0 auto;
+    background-color: #ffc602;
+}
+
+/* block */
+.message{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 80px;
+}
+
+.masseag__comment{
+    position: relative;
+    width: 550px;
+    box-sizing: border-box;            
+}
+
+.message__text{
+    background-color: #dbdbdb80;
+    padding: 20px;
+}
+
+.message__name{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.message img{
+    background: center center / cover no-repeat;
+    padding: 20px;
+    margin: 10px 0;
+    float: left;
+}
+
+.message__name-text{
+    margin: auto 10px;
+}
+
+/* block */
+.write{
+    position: relative;
+    text-align: center;
+    padding: 40px 0;
+    background-color: #eef0f0;
+}
+
+.write h2:after{
+    content: '';
+    position: absolute;
+    display: block;
+    bottom: -19px;
+    left: 0;
+    right: 0;
+    width: 220px;
+    height: 2px;
+    margin: 0 auto;
+    background-color: #ffc602;
+}
+
+/* block */
+.popup{
+    background: #eef0f0;
+}
+
+form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;            
+}
+
+.popup-form{
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+    min-width: 50%;
+    padding: 0 10px;
+    flex-grow: 1;
+    flex-basis: 400px;
+}
+
+form .send{
+    max-width: 50%;
+    padding: 0 10px 80px;  
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="submit"],
+textarea {
+    width: 100%;
+    padding: 10px 7px;
+    border: 4px solid orange;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+[type="submit"] {
+    color: white;
+    background: #273a43;
+    font-size: 18px;
+}
+
+.has-error {
+    border-color: red!important;
+}
+
+/* block */
+.final{
+    background: #273a43;
+}
+
+footer{
+    display: flex;    
+    padding: 40px 0;
+    color: white;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer__we,
+.footer__contact,
+.footer__news{
+    max-width: 260px;
+    flex-grow: 1;
+    flex-basis: 250px;
+    padding: 0 1vw;
+}
+
+footer h4{
+    padding: 20px 0;
+}
+.footer__we{
+    margin-top: 20px;
+}
+
+.footer__we .logo{
+    padding: 70px;
+    background: url(../icons/spasskaya-moscow.png) no-repeat center / contain;   
+}
+
+.footer__we div{
+    padding: 30px 0;
+    line-height: 1.5;
+    font-weight: 100;
+}
+
+.footer__contact p{
+    padding: 13px;
+}
+
+.footer__contact img{
+    background: center center / cover no-repeat;
+    padding: 12px;
+    margin: 10px 10px 10px 0;
+    float: left;
+}
+
+.footer__news div{
+    margin: 10px auto;
+}
+
+.footer__news p{
+    color: #0f9bf8
+}
+
+/* block */
+.script {
+    padding: 30px 0;
+    background-color: #172227;
+}
+
+.script__blocks{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;    
+    color: white;    
+}
+
+.script__blocks div{
+    max-width: 33.33334%;
+    padding: 10px 1vw;
+}
+
+.social a{
+    background:white center center / contain no-repeat;
+    padding: 16px;
+    margin-left: 5px; 
+    font-size: 0;
+    display: inline-block;
+}
+
+@media (max-width: 530px) {
+    .passage__image{
+        min-width: 100%;
+    }
+}
+
+
+@media (max-width: 871px) {    
+    form .send{
+        min-width: 100%;
+    }    
+}
+
+@media (max-width: 900px) {
+    .footer__we,
+    .footer__contact,
+    .footer__news{ 
+        min-width: 100%;
+    }
+
+    .script__blocks div{
+        min-width: 100%
+    }
+}
+
+@media (max-width: 920px) {
+    .we-right__about{    
+        padding: 80px 3vw;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 1199px) {
+    .passage__image{
+        min-width: 50%;
+    }
+}
